@@ -22,20 +22,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="选择有时候比努力更重要">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://example.com/categories/index.html">
+  <meta name="description" content="这是一份对CLIP这篇论文的阅读笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VLM论文阅读- CLIP">
+<meta property="og:url" content="http://example.com/2025/10/13/VLM%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-CLIP/index.html">
 <meta property="og:site_name" content="seize的奇妙小屋">
-<meta property="og:description" content="选择有时候比努力更重要">
+<meta property="og:description" content="这是一份对CLIP这篇论文的阅读笔记">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-10-10T08:01:50.000Z">
-<meta property="article:modified_time" content="2025-10-10T08:03:33.140Z">
+<meta property="og:image" content="http://example.com/2025/10/13/VLM%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-CLIP/pic.jpg">
+<meta property="article:published_time" content="2025-10-13T08:28:38.000Z">
+<meta property="article:modified_time" content="2025-10-13T08:30:18.427Z">
 <meta property="article:author" content="seize">
-<meta property="article:tag" content="EEG Emotion &amp; VLM">
+<meta property="article:tag" content="VLM经典论文">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2025/10/13/VLM%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-CLIP/pic.jpg">
 
-<link rel="canonical" href="http://example.com/categories/">
+<link rel="canonical" href="http://example.com/2025/10/13/VLM%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-CLIP/">
 
 
 <script id="page-configurations">
@@ -43,13 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类 | seize的奇妙小屋
-</title>
+  <title>VLM论文阅读- CLIP | seize的奇妙小屋</title>
   
 
 
@@ -161,51 +162,142 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">分类
-</h1>
-
-<div class="post-meta">
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/10/13/VLM%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-CLIP/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="seize">
+      <meta itemprop="description" content="选择有时候比努力更重要">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="seize的奇妙小屋">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VLM论文阅读- CLIP
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-10-13 16:28:38 / 修改时间：16:30:18" itemprop="dateCreated datePublished" datetime="2025-10-13T16:28:38+08:00">2025-10-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/VLM%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">VLM经典论文</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>这是一份对CLIP这篇论文的阅读笔记</p>
+<span id="more"></span>
+
+<h4 id="CLIP-Contrastive-Language-Image-Pre-Training"><a href="#CLIP-Contrastive-Language-Image-Pre-Training" class="headerlink" title="CLIP (Contrastive Language-Image Pre-Training)"></a>CLIP (Contrastive Language-Image Pre-Training)</h4><h5 id="1-整体概述"><a href="#1-整体概述" class="headerlink" title="1.整体概述"></a>1.整体概述</h5><p>是一种多模态预训练神经网络，是从自然语言监督中学习的一种有效且可扩展的方法【摆脱了固定标签类别的限制】。</p>
+<ul>
+<li>对于Image encoder主要是使用了预训练的ResNet和Vit，对于Text Encoder使用了Text transformer。</li>
+<li>在模型预训练阶段，相比于直接预测图片对应的确切文本，CLIP选择只预测哪个文本作为一个整体与哪个图像配对，这样任务更加简单，效果也更好。（可能是在无监督的情况下，要求准确预测切确单词太难了，难以收敛？）</li>
+<li>预训练后，为什么说其摆脱了固定标签的限制？其实是因为我们可以将数据集的所有类转换为文本，例如”A photo of a dog”，并预测CLIP估计的标题类与给定图像的最佳配对。之所以使用提示器工程而不是直接用”dog”，是因为我们预训练阶段使用的是句子形式的自然语言文本-图像对，如果预测的时候使用单个单词可能会导致性能下降。</li>
+</ul>
+<h5 id="2-Motivation"><a href="#2-Motivation" class="headerlink" title="2.Motivation"></a>2.Motivation</h5><ul>
+<li>为了突破在固定Label上训练特征提取器和分类头的限制，使得模型不再受到固定Label的限制</li>
+<li>增大自然语言监督数据的规模（自己用网络上的资源构建了一个数据集WIT）</li>
+</ul>
+<h5 id="3-Method"><a href="#3-Method" class="headerlink" title="3.Method"></a>3.Method</h5><img src="/2025/10/13/VLM%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-CLIP/pic.jpg" class="" title="CLIP 模型示意">
+
+<p>CLIP模型如图分为三个主要步骤，第一步是预训练Text Encoder和Vision Encoder，这篇论文采用了对比学习的代理任务来预训练这两个特征提取器。同一个Batch的图文数据对一起输入模型，他们分别提取出图像和文本特征后经过一个线性投射层得到一个向量，就是说每个图片和文本都会有一个对应的向量，所以构成了一个矩阵N x N，具体来说就是图像向量与文本向量相乘（$I_iT_i$）计算每个图片和文本的相似程度，然后通过损失函数使得真实对应的图文对（对角线上的元素）的相似度最高，其他的相似度降低。通过对比学习的预训练，成功将这两个特征提取器提取出来的图像和文本特征对齐在同一个特征空间里面。</p>
+<p>第二步是预测Label，他是如何突破Lable限制的呢。他首先用一个文本模版，将要预测的数据集的所有Label包装成一个句子再输入到Text Encoder里面，因为我们训练的时候使用的也是句子，这时候就得到了文本向量特征。随后输入一个图片经Vision Encoder提取特征后也得到图像向量，通过计算这个图像向量与文本向量的相似度选出相似度最高的一个Label作为最终的输出。</p>
+
+    </div>
+
+    
+    
+    
+
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束，感谢您的阅读-------------</div>
+    
+</div>
+      </div>
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>seize
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2025/10/13/VLM%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-CLIP/" title="VLM论文阅读- CLIP">http://example.com/2025/10/13/VLM论文阅读-CLIP/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
-</header>
 
-      
-      
-      
-      <div class="post-body">
-          <div class="category-all-page">
-            <div class="category-all-title">
-              目前共计 1 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/VLM%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/">VLM经典论文</a><span class="category-list-count">1</span></li></ul>
-            </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/VLM%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87/" rel="tag"># VLM经典论文</a>
           </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
 
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/09/22/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -256,6 +348,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#CLIP-Contrastive-Language-Image-Pre-Training"><span class="nav-number">1.</span> <span class="nav-text">CLIP (Contrastive Language-Image Pre-Training)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%95%B4%E4%BD%93%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">1.整体概述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Motivation"><span class="nav-number">1.2.</span> <span class="nav-text">2.Motivation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-Method"><span class="nav-number">1.3.</span> <span class="nav-text">3.Method</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
