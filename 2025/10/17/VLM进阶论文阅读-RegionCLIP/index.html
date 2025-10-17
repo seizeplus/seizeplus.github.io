@@ -22,20 +22,23 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="选择有时候比努力更重要">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://example.com/about/index.html">
+  <meta name="description" content="这是一份对RegionCLIP这篇论文的阅读笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VLM进阶论文阅读-RegionCLIP">
+<meta property="og:url" content="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/index.html">
 <meta property="og:site_name" content="seize的奇妙小屋">
-<meta property="og:description" content="选择有时候比努力更重要">
+<meta property="og:description" content="这是一份对RegionCLIP这篇论文的阅读笔记">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-10-10T08:02:08.000Z">
-<meta property="article:modified_time" content="2025-10-10T08:03:05.122Z">
+<meta property="og:image" content="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/pic2.jpg">
+<meta property="og:image" content="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/pic1.png">
+<meta property="article:published_time" content="2025-10-17T09:01:53.000Z">
+<meta property="article:modified_time" content="2025-10-17T09:13:09.227Z">
 <meta property="article:author" content="seize">
-<meta property="article:tag" content="EEG Emotion &amp; VLM">
+<meta property="article:tag" content="VLM进阶论文阅读">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/pic2.jpg">
 
-<link rel="canonical" href="http://example.com/about/">
+<link rel="canonical" href="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/">
 
 
 <script id="page-configurations">
@@ -43,13 +46,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>关于 | seize的奇妙小屋
-</title>
+  <title>VLM进阶论文阅读-RegionCLIP | seize的奇妙小屋</title>
   
 
 
@@ -161,43 +163,147 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">关于
-</h1>
-
-<div class="post-meta">
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="seize">
+      <meta itemprop="description" content="选择有时候比努力更重要">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="seize的奇妙小屋">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VLM进阶论文阅读-RegionCLIP
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-10-17 17:01:53 / 修改时间：17:13:09" itemprop="dateCreated datePublished" datetime="2025-10-17T17:01:53+08:00">2025-10-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" itemprop="url" rel="index"><span itemprop="name">VLM进阶论文阅读</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>这是一份对RegionCLIP这篇论文的阅读笔记</p>
+<span id="more"></span>
+
+<h4 id="RegionCLIP-Region-based-Language-Image-Pretraining"><a href="#RegionCLIP-Region-based-Language-Image-Pretraining" class="headerlink" title="RegionCLIP: Region-based Language-Image Pretraining"></a>RegionCLIP: Region-based Language-Image Pretraining</h4><h5 id="1-Motivation"><a href="#1-Motivation" class="headerlink" title="1.Motivation"></a>1.Motivation</h5><ul>
+<li><p>现成的图文对不包含区域级对齐，细粒度对齐既不可得又昂贵；而且图像说明往往不完整，很多区域没有被描述。需要一种不依赖人工标注、可规模化创建区域级监督的办法。</p>
+</li>
+<li><p>CLIP 只学到整图–文本的匹配，缺乏区域–文本的细粒度对齐；直接把 CLIP 用到检测时，定位质量差、分类准确率大幅下滑。因此需要专门学习“区域–文本”对齐。</p>
+</li>
+</ul>
+<h5 id="2-不同尺度对齐的描述"><a href="#2-不同尺度对齐的描述" class="headerlink" title="2.不同尺度对齐的描述"></a>2.不同尺度对齐的描述</h5><img src="/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/pic2.jpg" class="" title="细粒度">
+
+<p>(a)预训练的CLIP模型未能捕获定位质量。 </p>
+<p>(b)当使用相同的预训练CLIP对图像区域进行分类时，准确性大大下降。 </p>
+<p>(c)RegionCLIP的关键思想是学习匹配图像区域和它们的文本描述。</p>
+<h5 id="3-整体概述"><a href="#3-整体概述" class="headerlink" title="3.整体概述"></a>3.整体概述</h5><img src="/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/pic1.png" class="" title="RegionCLIP模型示意图">
+
+<ol>
+<li><strong>模型组件</strong><br> 使用一个冻结的 CLIP 语言编码器 L，以及两个视觉编码器：作为教师的 Vt（来自预训练 CLIP）和需要学习的学生视觉编码器 V（由 Vt 初始化）。目标是在保持 L 不变的前提下，让 V 学会将图像区域与文本描述对齐。 </li>
+<li><strong>构建伪 region–text 对（不训练，先对齐）</strong><br> 先用文本解析器从大规模图文语料里抽取概念池，把概念填入prompt 模板并用 L 得到文本嵌入；图像侧用RPN 产生候选区域，并用 Vt 提取区域特征；再计算区域与概念的相似度，为每个区域选取得分最高的概念作为伪标签，得到 region–text 数据对。  </li>
+<li><strong>区域级预训练（细粒度图文对齐）</strong><br> 用上述 region–text 对来只训练学生视觉编码器 V（语言编码器 L 保持冻结），优化由区域对比损失 + 概念蒸馏损失 + 图像级对比损失组成的目标，使 V 学会将区域表征与文本概念精确对齐。  </li>
+<li><strong>迁移到目标检测（含零样本与有监督）</strong><br> 将预训练好的 V 用作检测器的视觉骨干，继续用 RPN 产生候选框；识别阶段通过区域特征 ↔ 类别文本嵌入进行匹配。在有标注时可用检测数据微调；在零样本设置下，直接用 V 的区域表征去匹配目标类别嵌入进行检测。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束，感谢您的阅读-------------</div>
+    
+</div>
+      </div>
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>seize
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/" title="VLM进阶论文阅读-RegionCLIP">http://example.com/2025/10/17/VLM进阶论文阅读-RegionCLIP/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
-</header>
 
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" rel="tag"># VLM进阶论文阅读</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/10/17/VLM%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-LLaVA/" rel="prev" title="VLM论文阅读-LLaVA">
+      <i class="fa fa-chevron-left"></i> VLM论文阅读-LLaVA
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
+      </footer>
     
+  </article>
+  
+  
+  
 
-    
-    
-    
 
 
           </div>
@@ -248,6 +354,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#RegionCLIP-Region-based-Language-Image-Pretraining"><span class="nav-number">1.</span> <span class="nav-text">RegionCLIP: Region-based Language-Image Pretraining</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Motivation"><span class="nav-number">1.1.</span> <span class="nav-text">1.Motivation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%B8%8D%E5%90%8C%E5%B0%BA%E5%BA%A6%E5%AF%B9%E9%BD%90%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.</span> <span class="nav-text">2.不同尺度对齐的描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E6%95%B4%E4%BD%93%E6%A6%82%E8%BF%B0"><span class="nav-number">1.3.</span> <span class="nav-text">3.整体概述</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
