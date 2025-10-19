@@ -22,23 +22,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="这是一份对RegionCLIP这篇论文的阅读笔记">
+  <meta name="description" content="这是一份对Learning Concise and Descriptive Attributes for Visual Recognition这篇论文的阅读笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VLM进阶论文阅读-RegionCLIP">
-<meta property="og:url" content="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/index.html">
+<meta property="og:title" content="VLM进阶论文阅读-Learning Concise and Descriptive Attributes for Visual Recognition">
+<meta property="og:url" content="http://example.com/2025/10/19/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Learning-Concise-and-Descriptive-Attributes-for-Visual-Recognition/index.html">
 <meta property="og:site_name" content="seize的奇妙小屋">
-<meta property="og:description" content="这是一份对RegionCLIP这篇论文的阅读笔记">
+<meta property="og:description" content="这是一份对Learning Concise and Descriptive Attributes for Visual Recognition这篇论文的阅读笔记">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/pic2.jpg">
-<meta property="og:image" content="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/pic1.png">
-<meta property="article:published_time" content="2025-10-17T09:01:53.000Z">
-<meta property="article:modified_time" content="2025-10-17T09:13:09.227Z">
+<meta property="og:image" content="http://example.com/2025/10/19/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Learning-Concise-and-Descriptive-Attributes-for-Visual-Recognition/pic.png">
+<meta property="article:published_time" content="2025-10-19T12:44:30.000Z">
+<meta property="article:modified_time" content="2025-10-19T12:56:45.595Z">
 <meta property="article:author" content="seize">
 <meta property="article:tag" content="VLM进阶论文阅读">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/pic2.jpg">
+<meta name="twitter:image" content="http://example.com/2025/10/19/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Learning-Concise-and-Descriptive-Attributes-for-Visual-Recognition/pic.png">
 
-<link rel="canonical" href="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/">
+<link rel="canonical" href="http://example.com/2025/10/19/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Learning-Concise-and-Descriptive-Attributes-for-Visual-Recognition/">
 
 
 <script id="page-configurations">
@@ -51,7 +50,7 @@
   };
 </script>
 
-  <title>VLM进阶论文阅读-RegionCLIP | seize的奇妙小屋</title>
+  <title>VLM进阶论文阅读-Learning Concise and Descriptive Attributes for Visual Recognition | seize的奇妙小屋</title>
   
 
 
@@ -171,7 +170,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/10/19/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Learning-Concise-and-Descriptive-Attributes-for-Visual-Recognition/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -184,7 +183,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          VLM进阶论文阅读-RegionCLIP
+          VLM进阶论文阅读-Learning Concise and Descriptive Attributes for Visual Recognition
         </h1>
 
         <div class="post-meta">
@@ -195,7 +194,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-10-17 17:01:53 / 修改时间：17:13:09" itemprop="dateCreated datePublished" datetime="2025-10-17T17:01:53+08:00">2025-10-17</time>
+              <time title="创建时间：2025-10-19 20:44:30 / 修改时间：20:56:45" itemprop="dateCreated datePublished" datetime="2025-10-19T20:44:30+08:00">2025-10-19</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -225,28 +224,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>这是一份对RegionCLIP这篇论文的阅读笔记</p>
+        <p>这是一份对Learning Concise and Descriptive Attributes for Visual Recognition这篇论文的阅读笔记</p>
 <span id="more"></span>
 
-<h4 id="RegionCLIP-Region-based-Language-Image-Pretraining"><a href="#RegionCLIP-Region-based-Language-Image-Pretraining" class="headerlink" title="RegionCLIP: Region-based Language-Image Pretraining"></a>RegionCLIP: Region-based Language-Image Pretraining</h4><h5 id="1-Motivation"><a href="#1-Motivation" class="headerlink" title="1.Motivation"></a>1.Motivation</h5><ul>
-<li><p>现成的图文对不包含区域级对齐，细粒度对齐既不可得又昂贵；而且图像说明往往不完整，很多区域没有被描述。需要一种不依赖人工标注、可规模化创建区域级监督的办法。</p>
+<h4 id="Learning-Concise-and-Descriptive-Attributes-for-Visual-Recognition"><a href="#Learning-Concise-and-Descriptive-Attributes-for-Visual-Recognition" class="headerlink" title="Learning Concise and Descriptive Attributes for Visual Recognition"></a>Learning Concise and Descriptive Attributes for Visual Recognition</h4><h5 id="1-Motivation"><a href="#1-Motivation" class="headerlink" title="1.Motivation"></a>1.Motivation</h5><ul>
+<li><p><strong>大规模属性集的冗余与噪声问题</strong>：虽然使用由LLM生成的数千个属性进行视觉识别，其性能可以与传统的图像特征相媲美，但一个令人惊讶的发现是，当属性数量足够多时，这些 LLM 生成的属性的表现与随机选择的词语几乎没有差别。这一现象有力地表明，LLM 生成的大量属性中包含了显著的噪声和冗余信息。因此，论文的核心动机之一就是解决这个问题，即从这个庞大且嘈杂的属性池中，找出一个更小、更精华的子集，用以维持甚至提升分类性能。</p>
 </li>
-<li><p>CLIP 只学到整图–文本的匹配，缺乏区域–文本的细粒度对齐；直接把 CLIP 用到检测时，定位质量差、分类准确率大幅下滑。因此需要专门学习“区域–文本”对齐。</p>
+<li><p><strong>大规模属性集损害了模型的可解释性与交互性</strong>：即便大规模属性集能带来好的性能，它也严重损害了模型的可解释性。对于人类用户来说，要手动检查数千个属性来理解模型的决策过程是不现实的。论文的另一个核心动机是，通过学习一个concise属性集合，来构建一个更易于人类理解、解释和交互的模型。</p>
 </li>
 </ul>
-<h5 id="2-不同尺度对齐的描述"><a href="#2-不同尺度对齐的描述" class="headerlink" title="2.不同尺度对齐的描述"></a>2.不同尺度对齐的描述</h5><img src="/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/pic2.jpg" class="" title="细粒度">
+<h5 id="2-不同尺度对齐的描述"><a href="#2-不同尺度对齐的描述" class="headerlink" title="2.不同尺度对齐的描述"></a>2.不同尺度对齐的描述</h5><img src="/2025/10/19/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Learning-Concise-and-Descriptive-Attributes-for-Visual-Recognition/pic.png" class="" title="框架图">
 
-<p>(a)预训练的CLIP模型未能捕获定位质量。 </p>
-<p>(b)当使用相同的预训练CLIP对图像区域进行分类时，准确性大大下降。 </p>
-<p>(c)RegionCLIP的关键思想是学习匹配图像区域和它们的文本描述。</p>
-<h5 id="3-整体概述"><a href="#3-整体概述" class="headerlink" title="3.整体概述"></a>3.整体概述</h5><img src="/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/pic1.png" class="" title="RegionCLIP模型示意图">
-
-<ol>
-<li><strong>模型组件</strong><br> 使用一个冻结的 CLIP 语言编码器 L，以及两个视觉编码器：作为教师的 Vt（来自预训练 CLIP）和需要学习的学生视觉编码器 V（由 Vt 初始化）。目标是在保持 L 不变的前提下，让 V 学会将图像区域与文本描述对齐。 </li>
-<li><strong>构建伪 region–text 对（不训练，先对齐）</strong><br> 先用文本解析器从大规模图文语料里抽取概念池，把概念填入prompt 模板并用 L 得到文本嵌入；图像侧用RPN 产生候选区域，并用 Vt 提取区域特征；再计算区域与概念的相似度，为每个区域选取得分最高的概念作为伪标签，得到 region–text 数据对。  </li>
-<li><strong>区域级预训练（细粒度图文对齐）</strong><br> 用上述 region–text 对来只训练学生视觉编码器 V（语言编码器 L 保持冻结），优化由区域对比损失 + 概念蒸馏损失 + 图像级对比损失组成的目标，使 V 学会将区域表征与文本概念精确对齐。  </li>
-<li><strong>迁移到目标检测（含零样本与有监督）</strong><br> 将预训练好的 V 用作检测器的视觉骨干，继续用 RPN 产生候选框；识别阶段通过区域特征 ↔ 类别文本嵌入进行匹配。在有标注时可用检测数据微调；在零样本设置下，直接用 V 的区域表征去匹配目标类别嵌入进行检测。</li>
-</ol>
+<p>整个框架的核心思想是：我们不直接从语言模型LLM生成的海量嘈杂的属性中进行搜索，而是先通过一个由图像分类任务引导的学习过程，找到 K 个理想的属性应该是什么样的 (即学习一个理想的属性字典 E)，然后再用这个理想字典作为参照，去海量属性库中匹配出最接近的 K 个真实属性。</p>
+<ul>
+<li>第一阶段<ul>
+<li>首先我们需要获得一个最初的概念属性池，我们使用固定的提示词向LLM进行提问 (例如，请你给出最能描述xxx的特征)，我们通过这一步可以得到一个N × D的属性池。其中N为属性数，D是隐藏维度。</li>
+<li>接下来我们需要通过图像特征学习一个理想的属性字典。它并不直接在N个属性中搜索，而是创建一个可学习的、尺寸为K × D的嵌入矩阵E。将训练集的图像输入 VLM 得到图像特征，然后用这些图像特征与可学习的矩阵E进行交互，并尝试完成最终的分类任务。</li>
+<li>我们因此获得了一个理想的E，接下来，对于E中的每一个D维向量，我们去巨大属性池中，通过计算余弦相似度，找到一个最接近的真实属性向量。最后得到一个K × D的最终矩阵。</li>
+</ul>
+</li>
+<li>第二阶段<ul>
+<li>当一张新图像输入时，使用 VLM 的图像编码器将其转换为一个 D维的特征向量V 。同时，我们已经有了在阶段一筛选出的K个属性，它们也通过 VLM 的文本编码器转换为了一个K × D的特征矩阵。</li>
+<li>计算图像特征向量V与K个属性特征向量的余弦相似度，产出一个K维的向量，其中每个元素代表该图像与第i个属性的关联程度。</li>
+<li>将这个K维的属性得分向量A送入一个简单的线性分类器 。</li>
+</ul>
+</li>
+</ul>
 
     </div>
 
@@ -272,7 +275,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2025/10/17/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-RegionCLIP/" title="VLM进阶论文阅读-RegionCLIP">http://example.com/2025/10/17/VLM进阶论文阅读-RegionCLIP/</a>
+    <a href="http://example.com/2025/10/19/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Learning-Concise-and-Descriptive-Attributes-for-Visual-Recognition/" title="VLM进阶论文阅读-Learning Concise and Descriptive Attributes for Visual Recognition">http://example.com/2025/10/19/VLM进阶论文阅读-Learning-Concise-and-Descriptive-Attributes-for-Visual-Recognition/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -292,13 +295,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2025/10/17/VLM%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-LLaVA/" rel="prev" title="VLM论文阅读-LLaVA">
-      <i class="fa fa-chevron-left"></i> VLM论文阅读-LLaVA
+    <a href="/2025/10/19/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-AIM/" rel="prev" title="VLM进阶论文阅读-AIM">
+      <i class="fa fa-chevron-left"></i> VLM进阶论文阅读-AIM
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2025/10/18/VLM%E8%BF%9B%E9%98%B6%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Beyond-Embeddings/" rel="next" title="VLM进阶论文阅读-Beyond Embeddings">
-      VLM进阶论文阅读-Beyond Embeddings <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -357,7 +357,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#RegionCLIP-Region-based-Language-Image-Pretraining"><span class="nav-number">1.</span> <span class="nav-text">RegionCLIP: Region-based Language-Image Pretraining</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Motivation"><span class="nav-number">1.1.</span> <span class="nav-text">1.Motivation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%B8%8D%E5%90%8C%E5%B0%BA%E5%BA%A6%E5%AF%B9%E9%BD%90%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.</span> <span class="nav-text">2.不同尺度对齐的描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E6%95%B4%E4%BD%93%E6%A6%82%E8%BF%B0"><span class="nav-number">1.3.</span> <span class="nav-text">3.整体概述</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learning-Concise-and-Descriptive-Attributes-for-Visual-Recognition"><span class="nav-number">1.</span> <span class="nav-text">Learning Concise and Descriptive Attributes for Visual Recognition</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Motivation"><span class="nav-number">1.1.</span> <span class="nav-text">1.Motivation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%B8%8D%E5%90%8C%E5%B0%BA%E5%BA%A6%E5%AF%B9%E9%BD%90%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.</span> <span class="nav-text">2.不同尺度对齐的描述</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
